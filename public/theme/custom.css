@@ -1,0 +1,53 @@
+.text-black {
+    color: rgba(0, 0, 0, 0.8) !important;
+}
+.text-blue {
+    color: #212cc5 !important;
+}
+.font-semibold {
+    font-weight: 600;
+}
+.bg-custom {
+    background-color: transparent;
+    background: linear-gradient(180deg, #ffffff 0%, #eff2ff 100%);
+}
+.bg-old {
+    background: #eff2ff;
+}
+
+.hero-section {
+    background-image: url("../images/bg_1.webp");
+}
+.consult-area {
+    background-image: url("../images/about.webp");
+}
+.testimony-section {
+    background-image: url("../images/bg_1.webp");
+}
+.testimonial1 {
+    background-image: url("../images/testimony-1.webp");
+}
+.testimonial2 {
+    background-image: url("../images/testimony-2.webp");
+}
+.testimonial3 {
+    background-image: url("../images/testimony-3.webp");
+}
+.testimonial4 {
+    background-image: url("../images/testimony-4.webp");
+}
+.testimonial5 {
+    background-image: url("../images/testimony-5.webp");
+}
+.contact-us {
+    background-image: url("../images/bg_2.webp");
+}
+.blog1 {
+    background-image: url("../images/image_1.webp");
+}
+.blog2 {
+    background-image: url("../images/image_2.webp");
+}
+.blog3 {
+    background-image: url("../images/image_3.webp");
+}

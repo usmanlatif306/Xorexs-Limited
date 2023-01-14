@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.website')
 @section('content')
     @include('partials.breadcrumb', ['page' => 'About Us'])
 
@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <img src="images/services.svg" class="img-fluid" alt="" />
+                    <img src="images/services.svg" class="img-fluid" alt="{{ config('app.name') }}" />
                 </div>
                 <div class="col-md-4">
                     <div class="services-2 text-center">

@@ -1,9 +1,7 @@
-@extends('layouts.app')
-@push('recaptcha')
-    {!! RecaptchaV3::initJs() !!}
-@endpush
+@extends('layouts.website')
+
 @section('content')
-    <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg')" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap js-fullheight hero-section" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
@@ -101,7 +99,8 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <img src="images/services.svg" class="img-fluid" alt="" />
+                    <img src="images/services.svg" class="img-fluid" alt="{{ config('app.name') }}" width="100%"
+                        height="100%" />
                 </div>
                 <div class="col-md-4">
                     <div class="services-2 text-center">
@@ -127,7 +126,7 @@
         <div class="container">
             <div class="row no-gutters d-flex">
                 <div class="col-md-6 d-flex">
-                    <div class="img d-flex align-self-stretch" style="background-image: url(images/about.jpg)"></div>
+                    <div class="img d-flex align-self-stretch consult-area"></div>
                 </div>
                 <div class="col-md-6 p-3 pl-md-5 py-5 bg-primary">
                     <div class="row justify-content-start pb-3">
@@ -268,15 +267,16 @@
                 <div class="col-md-6 col-lg-3 ftco-animate">
                     <div class="project">
                         <div class="img">
-                            <img src="images/work-1.jpg" class="img-fluid" alt="Colorlib Template" />
+                            <img src="images/work-1.webp" class="img-fluid" alt="{{ config('app.name') }}"
+                                width="100%" height="100%" />
                         </div>
                         <div class="text text-center">
                             <span>Web Development</span>
                             <h3>
-                                <a href="project.html">Best Solution for Information Technology</a>
+                                <a href="{{ route('homepage') }}">Best Solution for Information Technology</a>
                             </h3>
                         </div>
-                        <a href="images/work-1.jpg"
+                        <a href="images/work-1.webp"
                             class="icon image-popup d-flex justify-content-center align-items-center">
                             <span class="fa fa-expand"></span>
                         </a>
@@ -285,13 +285,14 @@
                 <div class="col-md-6 col-lg-3 ftco-animate">
                     <div class="project">
                         <div class="img">
-                            <img src="images/work-2.jpg" class="img-fluid" alt="Colorlib Template" />
+                            <img src="images/work-2.webp" class="img-fluid" alt="{{ config('app.name') }}"
+                                width="100%" height="100%" />
                         </div>
                         <div class="text text-center">
                             <span>Web Application</span>
-                            <h3><a href="project.html">Creative Idea Build Up</a></h3>
+                            <h3><a href="{{ route('homepage') }}">Creative Idea Build Up</a></h3>
                         </div>
-                        <a href="images/work-2.jpg"
+                        <a href="images/work-2.webp"
                             class="icon image-popup d-flex justify-content-center align-items-center">
                             <span class="fa fa-expand"></span>
                         </a>
@@ -300,15 +301,16 @@
                 <div class="col-md-6 col-lg-3 ftco-animate">
                     <div class="project">
                         <div class="img">
-                            <img src="images/work-3.jpg" class="img-fluid" alt="Colorlib Template" />
+                            <img src="images/work-3.webp" class="img-fluid" alt="{{ config('app.name') }}"
+                                width="100%" height="100%" />
                         </div>
                         <div class="text text-center">
                             <span>Web Development</span>
                             <h3>
-                                <a href="project.html">Web Design Concept &amp; Web Analysis</a>
+                                <a href="{{ route('homepage') }}">Web Design Concept &amp; Web Analysis</a>
                             </h3>
                         </div>
-                        <a href="images/work-3.jpg"
+                        <a href="images/work-3.webp"
                             class="icon image-popup d-flex justify-content-center align-items-center">
                             <span class="fa fa-expand"></span>
                         </a>
@@ -317,15 +319,16 @@
                 <div class="col-md-6 col-lg-3 ftco-animate">
                     <div class="project">
                         <div class="img">
-                            <img src="images/work-4.jpg" class="img-fluid" alt="Colorlib Template" />
+                            <img src="images/work-4.webp" class="img-fluid" alt="{{ config('app.name') }}"
+                                width="100%" height="100%" />
                         </div>
                         <div class="text text-center">
                             <span>UI/UX Strategy</span>
                             <h3>
-                                <a href="project.html">Strategy for Enduring Customer Relationships</a>
+                                <a href="{{ route('homepage') }}">Strategy for Enduring Customer Relationships</a>
                             </h3>
                         </div>
-                        <a href="images/work-4.jpg"
+                        <a href="images/work-4.webp"
                             class="icon image-popup d-flex justify-content-center align-items-center">
                             <span class="fa fa-expand"></span>
                         </a>
@@ -335,7 +338,7 @@
         </div>
     </section>
 
-    <section class="ftco-section ftco-no-pb testimony-section" style="background-image: url(images/bg_1.jpg)">
+    <section class="ftco-section ftco-no-pb testimony-section">
         <div class="overlay-1"></div>
         <div class="container-fluid">
             <div class="row justify-content-center mb-5 pb-3">
@@ -347,8 +350,7 @@
                 <div class="col-md-12 testimonial">
                     <div class="carousel-testimony owl-carousel ftco-owl">
                         <div class="item">
-                            <div class="testimony-wrap d-flex align-items-stretch"
-                                style="background-image: url(images/testimony-1.jpg)">
+                            <div class="testimony-wrap d-flex align-items-stretch testimonial1">
                                 <div class="overlay"></div>
                                 <div class="text">
                                     <div class="line"></div>
@@ -365,8 +367,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <div class="testimony-wrap d-flex align-items-stretch"
-                                style="background-image: url(images/testimony-2.jpg)">
+                            <div class="testimony-wrap d-flex align-items-stretch testimonial2">
                                 <div class="overlay"></div>
                                 <div class="text">
                                     <div class="line"></div>
@@ -384,8 +385,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <div class="testimony-wrap d-flex align-items-stretch"
-                                style="background-image: url(images/testimony-3.jpg)">
+                            <div class="testimony-wrap d-flex align-items-stretch testimonial3">
                                 <div class="overlay"></div>
                                 <div class="text">
                                     <div class="line"></div>
@@ -402,8 +402,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <div class="testimony-wrap d-flex align-items-stretch"
-                                style="background-image: url(images/testimony-4.jpg)">
+                            <div class="testimony-wrap d-flex align-items-stretch testimonial4">
                                 <div class="overlay"></div>
                                 <div class="text">
                                     <div class="line"></div>
@@ -420,8 +419,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <div class="testimony-wrap d-flex align-items-stretch"
-                                style="background-image: url(images/testimony-5.jpg)">
+                            <div class="testimony-wrap d-flex align-items-stretch testimonial5">
                                 <div class="overlay"></div>
                                 <div class="text">
                                     <div class="line"></div>
@@ -442,91 +440,79 @@
         </div>
     </section>
 
-    <!-- <section class="ftco-section bg-light">
-                                                                                                                                                                      <div class="container">
-                                                                                                                                                                        <div class="row justify-content-center mb-5 pb-3">
-                                                                                                                                                                          <div class="col-md-7 heading-section text-center ftco-animate">
-                                                                                                                                                                            <h2>Read our latest blog</h2>
-                                                                                                                                                                          </div>
-                                                                                                                                                                        </div>
-                                                                                                                                                                        <div class="row d-flex">
-                                                                                                                                                                          <div class="col-md-4 d-flex ftco-animate">
-                                                                                                                                                                            <div class="blog-entry justify-content-end">
-                                                                                                                                                                              <a
-                                                                                                                                                                                href="blog-single.html"
-                                                                                                                                                                                class="block-20"
-                                                                                                                                                                                style="background-image: url('images/image_1.jpg')"
-                                                                                                                                                                              >
-                                                                                                                                                                              </a>
-                                                                                                                                                                              <div class="text mt-3 float-right d-block">
-                                                                                                                                                                                <div class="d-flex align-items-center pt-2 mb-4 topp">
-                                                                                                                                                                                  <div class="one">
-                                                                                                                                                                                    <span class="day">29</span>
-                                                                                                                                                                                  </div>
-                                                                                                                                                                                  <div class="two pl-1">
-                                                                                                                                                                                    <span class="yr">2020</span>
-                                                                                                                                                                                    <span class="mos">June</span>
-                                                                                                                                                                                  </div>
-                                                                                                                                                                                </div>
-                                                                                                                                                                                <h3 class="heading">
-                                                                                                                                                                                  <a href="#">Why Lead Generation is Key for Business Growth</a>
-                                                                                                                                                                                </h3>
-                                                                                                                                                                              </div>
-                                                                                                                                                                            </div>
-                                                                                                                                                                          </div>
-                                                                                                                                                                          <div class="col-md-4 d-flex ftco-animate">
-                                                                                                                                                                            <div class="blog-entry justify-content-end">
-                                                                                                                                                                              <a
-                                                                                                                                                                                href="blog-single.html"
-                                                                                                                                                                                class="block-20"
-                                                                                                                                                                                style="background-image: url('images/image_2.jpg')"
-                                                                                                                                                                              >
-                                                                                                                                                                              </a>
-                                                                                                                                                                              <div class="text mt-3 float-right d-block">
-                                                                                                                                                                                <div class="d-flex align-items-center pt-2 mb-4 topp">
-                                                                                                                                                                                  <div class="one">
-                                                                                                                                                                                    <span class="day">29</span>
-                                                                                                                                                                                  </div>
-                                                                                                                                                                                  <div class="two pl-1">
-                                                                                                                                                                                    <span class="yr">2020</span>
-                                                                                                                                                                                    <span class="mos">June</span>
-                                                                                                                                                                                  </div>
-                                                                                                                                                                                </div>
-                                                                                                                                                                                <h3 class="heading">
-                                                                                                                                                                                  <a href="#">Why Lead Generation is Key for Business Growth</a>
-                                                                                                                                                                                </h3>
-                                                                                                                                                                              </div>
-                                                                                                                                                                            </div>
-                                                                                                                                                                          </div>
-                                                                                                                                                                          <div class="col-md-4 d-flex ftco-animate">
-                                                                                                                                                                            <div class="blog-entry">
-                                                                                                                                                                              <a
-                                                                                                                                                                                href="blog-single.html"
-                                                                                                                                                                                class="block-20"
-                                                                                                                                                                                style="background-image: url('images/image_3.jpg')"
-                                                                                                                                                                              >
-                                                                                                                                                                              </a>
-                                                                                                                                                                              <div class="text mt-3 float-right d-block">
-                                                                                                                                                                                <div class="d-flex align-items-center pt-2 mb-4 topp">
-                                                                                                                                                                                  <div class="one">
-                                                                                                                                                                                    <span class="day">29</span>
-                                                                                                                                                                                  </div>
-                                                                                                                                                                                  <div class="two pl-1">
-                                                                                                                                                                                    <span class="yr">2020</span>
-                                                                                                                                                                                    <span class="mos">June</span>
-                                                                                                                                                                                  </div>
-                                                                                                                                                                                </div>
-                                                                                                                                                                                <h3 class="heading">
-                                                                                                                                                                                  <a href="#">Why Lead Generation is Key for Business Growth</a>
-                                                                                                                                                                                </h3>
-                                                                                                                                                                              </div>
-                                                                                                                                                                            </div>
-                                                                                                                                                                          </div>
-                                                                                                                                                                        </div>
-                                                                                                                                                                      </div>
-                                                                                                                                                                    </section> -->
+    {{-- <section class="ftco-section bg-light">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-3">
+                <div class="col-md-7 heading-section text-center ftco-animate">
+                    <h2>Read our latest blog</h2>
+                </div>
+            </div>
+            <div class="row d-flex">
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="blog-entry justify-content-end">
+                        <a href="blog-single.html" class="block-20 blog1">
+                        </a>
+                        <div class="text mt-3 float-right d-block">
+                            <div class="d-flex align-items-center pt-2 mb-4 topp">
+                                <div class="one">
+                                    <span class="day">29</span>
+                                </div>
+                                <div class="two pl-1">
+                                    <span class="yr">2020</span>
+                                    <span class="mos">June</span>
+                                </div>
+                            </div>
+                            <h3 class="heading">
+                                <a href="#">Why Lead Generation is Key for Business Growth</a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="blog-entry justify-content-end">
+                        <a href="blog-single.html" class="block-20 blog2" >
+                        </a>
+                        <div class="text mt-3 float-right d-block">
+                            <div class="d-flex align-items-center pt-2 mb-4 topp">
+                                <div class="one">
+                                    <span class="day">29</span>
+                                </div>
+                                <div class="two pl-1">
+                                    <span class="yr">2020</span>
+                                    <span class="mos">June</span>
+                                </div>
+                            </div>
+                            <h3 class="heading">
+                                <a href="#">Why Lead Generation is Key for Business Growth</a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="blog-entry">
+                        <a href="blog-single.html" class="block-20 blog3">
+                        </a>
+                        <div class="text mt-3 float-right d-block">
+                            <div class="d-flex align-items-center pt-2 mb-4 topp">
+                                <div class="one">
+                                    <span class="day">29</span>
+                                </div>
+                                <div class="two pl-1">
+                                    <span class="yr">2020</span>
+                                    <span class="mos">June</span>
+                                </div>
+                            </div>
+                            <h3 class="heading">
+                                <a href="#">Why Lead Generation is Key for Business Growth</a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> --}}
 
-    <section class="ftco-appointment ftco-section img" style="background-image: url(images/bg_2.jpg)">
+    <section class="ftco-appointment ftco-section img contact-us">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
@@ -583,3 +569,7 @@
         </div>
     </section>
 @endsection
+
+@push('scripts')
+    {!! RecaptchaV3::initJs() !!}
+@endpush

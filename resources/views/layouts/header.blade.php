@@ -4,20 +4,28 @@
             <div class="col-12 col-md d-flex align-items-center">
                 <p class="mb-0 phone">
                     <span class="mailus">email us:</span>
-                    <a href="#">info@xorexs.com</a>
+                    <a href="mailto:info@xorexs.com">info@xorexs.com</a>
                 </p>
             </div>
             <div class="col-12 col-md d-flex justify-content-md-end">
                 <div class="social-media">
                     <p class="mb-0 d-flex">
-                        <a href="#" class="d-flex align-items-center justify-content-center"><span
-                                class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
-                        <a href="#" class="d-flex align-items-center justify-content-center"><span
-                                class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
-                        <a href="#" class="d-flex align-items-center justify-content-center"><span
-                                class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
-                        <a href="#" class="d-flex align-items-center justify-content-center"><span
-                                class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
+                        @if ($facebook)
+                            <a href="{{ $facebook }}" class="d-flex align-items-center justify-content-center"><span
+                                    class="fab fa-facebook"><i class="sr-only">Facebook</i></span></a>
+                        @endif
+                        @if ($twitter)
+                            <a href="{{ $twitter }}" class="d-flex align-items-center justify-content-center"><span
+                                    class="fab fa-twitter"><i class="sr-only">Twitter</i></span></a>
+                        @endif
+                        @if ($linkedin)
+                            <a href="{{ $linkedin }}" class="d-flex align-items-center justify-content-center"><span
+                                    class="fab fa-linkedin"><i class="sr-only">Instagram</i></span></a>
+                        @endif
+                        @if ($instagram)
+                            <a href="{{ $instagram }}" class="d-flex align-items-center justify-content-center"><span
+                                    class="fab fa-instagram"><i class="sr-only">Instagram</i></span></a>
+                        @endif
                     </p>
                 </div>
             </div>
@@ -28,7 +36,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
         <a class="navbar-brand" href="{{ route('homepage') }}">
-            <img src="{{ asset('images/logo-black.png') }}" alt="Xorexs Limited" width="171" height="41" />
+            <img src="{{ asset('images/logo-black.webp') }}" alt="{{ config('app.name') }}" width="171"
+                height="41" />
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
             aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,8 +53,8 @@
                     <a href="{{ route('about') }}" class="nav-link">About</a>
                 </li>
                 <li class="nav-item dropdown {{ request()->is('services/*') ? 'active' : '' }}">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                        aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="{{ route('services') }}" role="button"
+                        data-toggle="dropdown" aria-expanded="false">
                         Services
                     </a>
                     <div class="dropdown-menu">

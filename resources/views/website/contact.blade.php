@@ -1,7 +1,4 @@
-@extends('layouts.app')
-@push('recaptcha')
-    {!! RecaptchaV3::initJs() !!}
-@endpush
+@extends('layouts.website')
 @section('content')
     @include('partials.breadcrumb', ['page' => 'Contact Us'])
     <section class="ftco-section bg-light">
@@ -120,3 +117,9 @@
         </div>
     </section>
 @endsection
+
+@push('scripts')
+    {!! RecaptchaV3::initJs() !!}
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="{{ asset('js/google-map.js') }}"></script>
+@endpush

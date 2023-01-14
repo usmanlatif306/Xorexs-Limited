@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.website')
 @section('content')
     @include('partials.breadcrumb', ['page' => 'Services', 'subpage' => 'Software Consultancy'])
 

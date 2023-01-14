@@ -4,16 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\MessageRequest;
 use App\Notifications\MessageNotification;
+use App\Services\SeoService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Notification;
 
 class WebsiteController extends Controller
 {
+
     /**
      * showing homepage
      */
     public function index()
     {
+        (new SeoService())->load('homepage');
+
         return view('website.index');
     }
 
@@ -22,6 +26,7 @@ class WebsiteController extends Controller
      */
     public function about()
     {
+        (new SeoService())->load('about');
         return view('website.about');
     }
 
@@ -30,6 +35,7 @@ class WebsiteController extends Controller
      */
     public function contact()
     {
+        (new SeoService())->load('contact');
         return view('website.contact');
     }
 
@@ -58,6 +64,7 @@ class WebsiteController extends Controller
      */
     public function consultancy()
     {
+        (new SeoService())->load('consultancy');
         return view('website.services.consultancy');
     }
 
@@ -66,6 +73,7 @@ class WebsiteController extends Controller
      */
     public function web()
     {
+        (new SeoService())->load('web_development');
         return view('website.services.web');
     }
 
@@ -74,6 +82,7 @@ class WebsiteController extends Controller
      */
     public function design()
     {
+        (new SeoService())->load('user_design');
         return view('website.services.design');
     }
 
@@ -82,6 +91,7 @@ class WebsiteController extends Controller
      */
     public function planning()
     {
+        (new SeoService())->load('strategy_planning');
         return view('website.services.planning');
     }
 }

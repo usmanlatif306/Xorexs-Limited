@@ -4,8 +4,8 @@
             <div class="col-md">
                 <div class="ftco-footer-widget mb-4">
                     <h2 class="ftco-footer-logo">
-                        <img src="./images/logo-white.png" alt="Xorexs Limited" />
-                        <!-- IT<span>solution</span> -->
+                        <img src="./images/logo-white.webp" alt="{{ config('app.name') }}" />
+                        IT<span>solutions</span>
                     </h2>
                     <p>
                         For developing innovative software Solutions for leading
@@ -13,15 +13,31 @@
                         their businesses using latest technology solutions.
                     </p>
                     <ul class="ftco-footer-social list-unstyled mt-2">
-                        <li class="ftco-animate">
-                            <a href="#"><span class="fab fa-twitter"></span></a>
-                        </li>
-                        <li class="ftco-animate">
-                            <a href="#"><span class="fab fa-facebook"></span></a>
-                        </li>
-                        <li class="ftco-animate">
-                            <a href="#"><span class="fab fa-instagram"></span></a>
-                        </li>
+
+
+                        @if ($facebook)
+                            <li class="ftco-animate">
+                                <a href="{{ $facebook }}"><span class="fab fa-facebook"></span></a>
+                            </li>
+                        @endif
+
+                        @if ($twitter)
+                            <li class="ftco-animate">
+                                <a href="{{ $twitter }}"><span class="fab fa-twitter"></span></a>
+                            </li>
+                        @endif
+
+                        @if ($instagram)
+                            <li class="ftco-animate">
+                                <a href="{{ $instagram }}"><span class="fab fa-instagram"></span></a>
+                            </li>
+                        @endif
+
+                        @if ($linkedin)
+                            <li class="ftco-animate">
+                                <a href="{{ $linkedin }}"><span class="fab fa-linkedin"></span></a>
+                            </li>
+                        @endif
                     </ul>
                 </div>
             </div>
@@ -50,11 +66,12 @@
                                     Kingdom.</span>
                             </li>
                             <li>
-                                <a href="#"><span class="icon fa fa-phone"></span><span class="text">+44
+                                <a href="tel:+44(845)4670515"><span class="icon fa fa-phone"></span><span
+                                        class="text">+44
                                         (845) 4670515</span></a>
                             </li>
                             <li>
-                                <a href="#"><span class="icon fa fa-paper-plane pr-4"></span><span
+                                <a href="mailto:info@xorexs.com"><span class="icon fa fa-paper-plane pr-4"></span><span
                                         class="text">info@xorexs.com</span></a>
                             </li>
                         </ul>
@@ -67,9 +84,7 @@
                 <p>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     Copyright &copy;
-                    <script>
-                        document.write(new Date().getFullYear());
-                    </script>
+                    {{ date('Y') }}
                     All rights reserved
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 </p>
